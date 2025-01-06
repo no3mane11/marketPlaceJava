@@ -7,6 +7,7 @@ import java.sql.SQLException;
 public class DatabaseConnection {
     private Connection databaseLink;
 
+
     public Connection getConnection() {
         String databaseName = "nhdb";
         String databaseUser = "root"; // Remplacez par votre nom d'utilisateur
