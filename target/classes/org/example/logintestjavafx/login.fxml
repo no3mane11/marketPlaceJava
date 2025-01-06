@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.logintestjavafx.HelloController">
+    <left>
+        <AnchorPane prefHeight="400.0" prefWidth="228.0" style="-fx-background-color: linear-gradient(to bottom, #1e3c72, #2a5298);" BorderPane.alignment="CENTER">
+            <children>
+                <Label alignment="CENTER" layoutX="-2.0" layoutY="111.0" prefHeight="17.0" prefWidth="233.0" text="MarketPlace" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="26.0" />
+                    </font>
+                    <effect>
+                        <DropShadow color="BLACK" radius="10" spread="0.2" />
+                    </effect>
+                </Label>
+                <Line endX="127.0" endY="0.0" layoutX="76.0" layoutY="166.0" startX="-47.666656494140625" startY="0.0" stroke="#f8f3f3" strokeWidth="2.0">
+                    <effect>
+                        <DropShadow color="BLACK" radius="5" />
+                    </effect>
+                </Line>
+                <Circle fill="DODGERBLUE" layoutX="52.0" layoutY="89.0" radius="13.0" stroke="BLACK" strokeType="INSIDE" />
+                <Circle fill="transparent" layoutX="115.0" layoutY="166.0" radius="100.0" stroke="WHITE" strokeWidth="2.0" strokeType="INSIDE" />
+                <Label alignment="CENTER" layoutX="26.0" layoutY="183.0" prefHeight="31.0" prefWidth="173.0" text="The Best Choice" textFill="#f8f6f6">
+                    <font>
+                        <Font name="System Bold" size="19.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" layoutX="20.0" layoutY="337.0" prefHeight="29.0" prefWidth="191.0" text="copyright © 2024 all rights reserved" textFill="#fffafa">
+                    <font>
+                        <Font name="System Bold" size="11.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </left>
+    <center>
+        <AnchorPane prefHeight="400.0" prefWidth="373.0" style="-fx-background-color: #f4f4f4;" BorderPane.alignment="CENTER">
+            <children>
+                <Label alignment="CENTER" layoutX="90.0" layoutY="26.0" prefHeight="17.0" prefWidth="193.0" text="Login Page" textFill="#333333">
+                    <font>
+                        <Font size="23.0" />
+                    </font>
+                </Label>
+                <Label layoutX="40.0" layoutY="107.0" text="Username" textFill="#333333">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="40.0" layoutY="162.0" text="Password" textFill="#333333">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="usernameTextField" layoutX="118.0" layoutY="105.0" promptText="Username" style="-fx-background-color: #ffffff; -fx-border-color: #cccccc; -fx-border-radius: 5; -fx-padding: 5;" />
+                <PasswordField fx:id="passwordPasswordField" layoutX="118.0" layoutY="160.0" promptText="Password" style="-fx-background-color: #ffffff; -fx-border-color: #cccccc; -fx-border-radius: 5; -fx-padding: 5;" />
+                <Button fx:id="faceRecognitionButton" layoutX="78.0" layoutY="362.0" mnemonicParsing="false"
+                        onAction="#handleFaceRecognitionAction" prefHeight="25.0" prefWidth="219.0"
+                        style="-fx-background-color: #5cb85c; -fx-text-fill: #ffffff; -fx-border-radius: 5;"
+                        text="Login with Face Recognition">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Button>
+
+                <Button fx:id="loginButton" layoutX="77.0" layoutY="230.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="25.0" prefWidth="219.0" style="-fx-background-color: #1e3c72; -fx-text-fill: #ffffff; -fx-border-radius: 5;" text="Login">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Button>
+                <Button fx:id="cancelButton" layoutX="78.0" layoutY="274.0" mnemonicParsing="false" onAction="#cancelButtonAction" prefHeight="25.0" prefWidth="219.0" style="-fx-background-color: #d9534f; -fx-text-fill: #ffffff; -fx-border-radius: 5;" text="Cancel">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Button>
+                <Button fx:id="signupButton" layoutX="78.0" layoutY="318.0" mnemonicParsing="false" onAction="#handleSignupButtonAction" prefHeight="25.0" prefWidth="219.0" style="-fx-background-color: #5bc0de; -fx-text-fill: #ffffff; -fx-border-radius: 5;" text="Signup">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Button>
+                <Label fx:id="loginMessageLabel" alignment="CENTER" layoutX="55.0" layoutY="72.0" prefHeight="17.0" prefWidth="289.0" textFill="#9a0707" style="-fx-font-weight: bold;" />
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>
