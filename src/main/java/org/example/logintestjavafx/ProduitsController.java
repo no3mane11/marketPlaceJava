@@ -1,5 +1,6 @@
 package org.example.logintestjavafx;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.control.*;
@@ -23,17 +24,22 @@ import java.io.IOException;
 
 public class ProduitsController {
 
+
     @FXML
     private ListView<Produits> produitsListView;
 
     @FXML
-    private ListView<String> notificationsListView;
+    private ListView<String> notificationsListView; // Ensure this matches the fx:id in FXML
+
+
 
     @FXML
     private TextField txtNom, txtDescription, txtPrix, txtQuantite, txtImageProduits;
 
     @FXML
-    private Button btnAjouter, btnModifier, btnSupprimer, btnEffacer, btnImage, btnQuitter;
+    private Button btnAjouter, btnModifier, btnSupprimer, btnEffacer, btnImage, btnQuitter , btnOpenChat;
+
+    private Button chat;
 
     @FXML
     private Label welcomeLabel;
@@ -76,6 +82,7 @@ public class ProduitsController {
         btnEffacer.setOnAction(e -> effacerChamps());
         btnImage.setOnAction(e -> handleImageSelection());
         btnQuitter.setOnAction(e -> handleQuitter());
+        btnOpenChat.setOnAction(e->handleOpenChat());
 
 
         produitsListView.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
@@ -87,7 +94,33 @@ public class ProduitsController {
                 txtImageProduits.setText(newValue.getImageProduits());
             }
         });
+
+
     }
+
+
+    @FXML
+    private void handleOpenChat() {
+        try {
+            // Load the chat.fxml file
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("chat.fxml"));
+            Parent root = loader.load();
+
+            // Get the chat controller and set the current user ID
+            chat chatController = loader.getController();
+            chatController.setCurrentUserId(userId); // Pass the current user ID to the chat controller
+
+            // Create a new stage for the chat window
+            Stage chatStage = new Stage();
+            chatStage.setTitle("Chat");
+            chatStage.setScene(new Scene(root));
+            chatStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            showAlert("Error", "Unable to open the chat window: " + e.getMessage());
+        }
+    }
+
 
     private void loadProduits() {
         produitsListView.getItems().clear();
@@ -233,6 +266,7 @@ public class ProduitsController {
         notificationsListView.getItems().clear();
         DatabaseConnection con = new DatabaseConnection();
         Connection conDb = con.getConnection();
+
 
         String query = "SELECT Message, Date FROM Notifications WHERE UserID = ? ORDER BY Date DESC";
 

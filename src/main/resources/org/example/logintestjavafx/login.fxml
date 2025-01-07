@@ -66,24 +66,24 @@
                 <PasswordField fx:id="passwordPasswordField" layoutX="118.0" layoutY="160.0" promptText="Password" style="-fx-background-color: #ffffff; -fx-border-color: #cccccc; -fx-border-radius: 5; -fx-padding: 5;" />
                 <Button fx:id="faceRecognitionButton" layoutX="78.0" layoutY="362.0" mnemonicParsing="false"
                         onAction="#handleFaceRecognitionAction" prefHeight="25.0" prefWidth="219.0"
-                        style="-fx-background-color: #5cb85c; -fx-text-fill: #ffffff; -fx-border-radius: 5;"
+                        style="-fx-background-color: #5cb85c; -fx-text-fill: #ffffff; -fx-border-radius: 5; -fx-cursor: hand;"
                         text="Login with Face Recognition">
                     <font>
                         <Font size="13.0" />
                     </font>
                 </Button>
 
-                <Button fx:id="loginButton" layoutX="77.0" layoutY="230.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="25.0" prefWidth="219.0" style="-fx-background-color: #1e3c72; -fx-text-fill: #ffffff; -fx-border-radius: 5;" text="Login">
+                <Button fx:id="loginButton" layoutX="77.0" layoutY="230.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="25.0" prefWidth="219.0" style="-fx-background-color: #1e3c72; -fx-text-fill: #ffffff; -fx-border-radius: 5; -fx-cursor: hand;" text="Login">
                     <font>
                         <Font size="13.0" />
                     </font>
                 </Button>
-                <Button fx:id="cancelButton" layoutX="78.0" layoutY="274.0" mnemonicParsing="false" onAction="#cancelButtonAction" prefHeight="25.0" prefWidth="219.0" style="-fx-background-color: #d9534f; -fx-text-fill: #ffffff; -fx-border-radius: 5;" text="Cancel">
+                <Button fx:id="cancelButton" layoutX="78.0" layoutY="274.0" mnemonicParsing="false" onAction="#cancelButtonAction" prefHeight="25.0" prefWidth="219.0" style="-fx-background-color: #d9534f; -fx-text-fill: #ffffff; -fx-border-radius: 5; -fx-cursor: hand;" text="Cancel">
                     <font>
                         <Font size="13.0" />
                     </font>
                 </Button>
-                <Button fx:id="signupButton" layoutX="78.0" layoutY="318.0" mnemonicParsing="false" onAction="#handleSignupButtonAction" prefHeight="25.0" prefWidth="219.0" style="-fx-background-color: #5bc0de; -fx-text-fill: #ffffff; -fx-border-radius: 5;" text="Signup">
+                <Button fx:id="signupButton" layoutX="78.0" layoutY="318.0" mnemonicParsing="false" onAction="#handleSignupButtonAction" prefHeight="25.0" prefWidth="219.0" style="-fx-background-color: #5bc0de; -fx-text-fill: #ffffff; -fx-border-radius: 5; -fx-cursor: hand;" text="Signup">
                     <font>
                         <Font size="13.0" />
                     </font>

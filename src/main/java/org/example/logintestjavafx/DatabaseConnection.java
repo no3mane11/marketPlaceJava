@@ -10,9 +10,9 @@ public class DatabaseConnection {
 
 
     public Connection getConnection() {
-        String databaseName = "nhdb";
+        String databaseName = "marketplace";
         String databaseUser = "root"; // Remplacez par votre nom d'utilisateur
-        String databasePassword = "No@rc@321"; // Remplacez par votre mot de passe
+        String databasePassword = "20011103Sa@"; // Remplacez par votre mot de passe
         String databaseUrl = "jdbc:mysql://localhost:3306/" + databaseName +
                 "?useSSL=false&serverTimezone=UTC";
 
