@@ -89,7 +89,7 @@ public class SignupController {
 
         File file = fileChooser.showOpenDialog(stage);
         if (file != null) {
-            String destinationDir = "C:/Users/ALIENWARE/Pictures/wallpapers/";
+            String destinationDir = "C:/Users/samie/Documents/Dev/MarketPlaceUsersProfiles";
             File destinationFile = new File(destinationDir + file.getName());
             try {
                 Files.copy(file.toPath(), destinationFile.toPath(), StandardCopyOption.REPLACE_EXISTING);

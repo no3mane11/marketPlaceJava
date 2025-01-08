@@ -16,6 +16,22 @@
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>21.0.1</version> <!-- Match this with your runtime version -->
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>21.0.1</version> <!-- Match this with your runtime version -->
+        </dependency>
+        <dependency>
+            <groupId>org.openpnp</groupId>
+            <artifactId>opencv</artifactId>
+            <version>4.5.1-2</version>
+        </dependency>
         <!-- JavaFX Dependencies -->
         <dependency>
             <groupId>org.openjfx</groupId>
@@ -49,11 +65,12 @@
             <version>11.2.1</version>
         </dependency>
 
-        <!-- FormsFX -->
+        <!-- https://mvnrepository.com/artifact/com.dlsc.formsfx/formsfx -->
         <dependency>
             <groupId>com.dlsc.formsfx</groupId>
             <artifactId>formsfx</artifactId>
             <version>11.6.0</version>
+            <type>pom</type>
         </dependency>
 
         <!-- BootstrapFX -->
@@ -62,6 +79,7 @@
             <artifactId>bootstrapfx-core</artifactId>
             <version>0.4.0</version>
         </dependency>
+
 
 
 

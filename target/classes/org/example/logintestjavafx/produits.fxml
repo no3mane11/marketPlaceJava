@@ -19,8 +19,6 @@
 
 <TabPane prefHeight="600.0" prefWidth="818.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.logintestjavafx.ProduitsController">
    <tabs>
-
-
       <!-- Onglet "Commander des Produits" -->
       <Tab text="Commander des Produits">
          <content>
@@ -38,8 +36,19 @@
                      </style>
                   </Label>
 
+                  <!-- Message d'information -->
+                  <Label alignment="CENTER" layoutX="100.0" layoutY="50.0" prefHeight="40.0" prefWidth="600.0" text="Pour envoyer un message au vendeur, allez vers l'onglet Notifications">
+                     <font>
+                        <Font name="Arial Black" size="18.0" />
+                     </font>
+                     <style>
+                        -fx-text-fill: #000000;
+                        -fx-font-weight: bold;
+                     </style>
+                  </Label>
+
                   <!-- Conteneur principal pour les produits -->
-                  <VBox layoutX="50.0" layoutY="60.0" prefHeight="500.0" prefWidth="700.0" spacing="15.0" style="-fx-background-color: white; -fx-border-color: #4CAF50; -fx-border-radius: 10; -fx-padding: 15; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(76,175,80,0.25), 15, 0.5, 0, 0);">
+                  <VBox layoutX="50.0" layoutY="100.0" prefHeight="450.0" prefWidth="700.0" spacing="15.0" style="-fx-background-color: white; -fx-border-color: #4CAF50; -fx-border-radius: 10; -fx-padding: 15; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(76,175,80,0.25), 15, 0.5, 0, 0);">
                      <Label alignment="CENTER" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #388E3C;" text="Produits disponibles" />
                      <!-- Liste des produits sous forme de cartes -->
                      <ScrollPane fitToWidth="true" style="-fx-background-color: transparent;">
@@ -60,6 +69,8 @@
             </AnchorPane>
          </content>
       </Tab>
+
+      <!-- Onglet "Gestion des Produits" -->
       <Tab text="Gestion des Produits">
          <content>
             <AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(to bottom, #00B8D4, #FFEBEE);">
@@ -103,6 +114,7 @@
                            <TextField fx:id="txtImageProduits" prefWidth="300.0" style="-fx-padding: 5; -fx-border-color: #00B8D4; -fx-border-radius: 5;" />
                            <Button fx:id="btnImage" style="-fx-background-color: #FF6F61; -fx-text-fill: white; -fx-border-radius: 5;" text="Parcourir" />
                         </HBox>
+
                         <columnConstraints>
                            <ColumnConstraints />
                            <ColumnConstraints />
@@ -117,15 +129,15 @@
                      </GridPane>
                   </VBox>
 
-                  <!-- Boutons d'action déplacés plus bas -->
-                  <HBox layoutX="181.0" layoutY="544.0" prefHeight="55.0" prefWidth="312.0" spacing="20.0">
+                  <!-- Boutons d'action -->
+                  <HBox layoutX="250.0" layoutY="540.0" prefHeight="55.0" prefWidth="312.0" spacing="20.0">
                      <Button fx:id="btnAjouter" style="-fx-background-color: #388E3C; -fx-text-fill: white; -fx-border-radius: 5;" text="Ajouter" />
                      <Button fx:id="btnModifier" style="-fx-background-color: #FFC107; -fx-text-fill: white; -fx-border-radius: 5;" text="Modifier" />
                      <Button fx:id="btnSupprimer" style="-fx-background-color: #F44336; -fx-text-fill: white; -fx-border-radius: 5;" text="Supprimer" />
                      <Button fx:id="btnEffacer" style="-fx-background-color: #9E9E9E; -fx-text-fill: white; -fx-border-radius: 5;" text="Effacer" />
                   </HBox>
 
-                  <!-- Message de bienvenue et bouton Quitter déplacés vers le haut à droite -->
+                  <!-- Message de bienvenue et bouton Quitter -->
                   <HBox layoutX="650.0" layoutY="10.0" spacing="20.0">
                      <Label fx:id="welcomeLabel" prefHeight="25.0" prefWidth="131.0" style="-fx-font-size: 14px; -fx-text-fill: #555;" text="Bienvenue !" />
                      <Button fx:id="btnQuitter" prefHeight="27.0" prefWidth="87.0" style="-fx-background-color: #D32F2F; -fx-text-fill: white; -fx-border-radius: 5;" text="Quitter" />
@@ -140,6 +152,8 @@
          <content>
             <AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(to bottom, #e3f2fd, #bbdefb);">
                <children>
+                  <!-- Open Chat Button -->
+                  <Button fx:id="btnOpenChat" layoutX="700.0" layoutY="20.0" text="Open Chat" onAction="#handleOpenChat" style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-border-radius: 5;" />
                   <!-- Titre de la page -->
                   <Label alignment="CENTER" layoutX="200.0" layoutY="10.0" prefHeight="37.0" prefWidth="400.0" text="Notifications">
                      <font>
@@ -162,6 +176,5 @@
             </AnchorPane>
          </content>
       </Tab>
-
    </tabs>
 </TabPane>
